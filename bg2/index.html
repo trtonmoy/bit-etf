@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="./style.css" />
 
     <style>
+      @font-face {
+        font-family: "Franchise";
+        src: url("/images/Franchise-Free-Bold.otf") format("woff2"),
+          url("/images/Franchise-Free-Bold.otf") format("woff");
+        /* Add more formats if needed (e.g., ttf, svg, etc.) */
+      }
       /* Default background for desktop */
       body {
         background-image: url("https://subcrawldew.com/pepe2/bg2/bgbw.jpg");
@@ -156,18 +162,36 @@
         background-color: rgba(255, 255, 255, 0.2);
       }
 
-      .head_title h1 {
+      .head_title h2 {
         text-align: center;
         color: #fff;
-        font-family: "Poppins";
+        font-family: "Franchise";
         position: absolute;
-        top: 10%;
+        top: 6%;
         left: 30%;
         font-size: 50px;
+        font-weight: bolder;
       }
 
+      .video-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      .responsive-video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      .ban_img {
+        margin: 200px 0 0;
+        width: 100%;
+        height: 650px;
+      }
       @media screen and (max-width: 768px) {
-        .head_title h1 {
+        .head_title h2 {
           text-align: center;
           color: #fff;
           font-family: poppins;
@@ -176,6 +200,41 @@
           left: 25%;
           font-size: 30px;
         }
+
+        .ban_img {
+          margin: 200px 0 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @media screen and (min-width: 1600px) {
+        .ban_img {
+          margin: 200px 0 0;
+          width: 100%;
+          height: 750px;
+        }
+        .head_title h2 {
+          text-align: center;
+          color: #fff;
+          font-family: "Franchise";
+          position: absolute;
+          top: 1%;
+          left: 35%;
+          font-size: 70px;
+        }
+      }
+
+      .vintage {
+        background: lighten(brown, 5%);
+        color: #ff8611;
+        font-family: "poppins";
+        text-shadow: 2px 2px 0px #fff, 6px 15px 0px rgba(0, 0, 0, 0.15);
+        display: block;
+        text-transform: uppercase;
+        transform: rotate(0deg);
+        font-size: 2em;
+        margin: 0;
       }
     </style>
   </head>
@@ -184,7 +243,11 @@
 
     <div id="word">
       <div class="head_title">
-        <h1>BlackRock Bitcoin ETF</h1>
+        <h2>
+          <span class="vintage" style="font-family: Franchise"
+            >BlackRock Bitcoin ETF</span
+          >
+        </h2>
       </div>
       <img
         src="/images/Asset6.png"
@@ -225,7 +288,14 @@
         </li>
       </ul>
     </div>
-    <img src="/images/ban.gif" alt="" style="margin: 200px 0 0; width: 100%" />
+    <img src="/images/ban.gif" alt="" class="ban_img" />
+
+    <!-- <div class="video-container">
+      <video class="responsive-video" loop id="autoplayVideo">
+        <source src="/images/ban.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div> -->
     <script>
       function toggleMenu() {
         var menu = document.getElementById("menu");
@@ -234,6 +304,20 @@
         menu.classList.toggle("open");
         button.classList.toggle("open");
       }
+
+      const video = document.getElementById("autoplayVideo");
+
+      // Function to replay the video when it ends
+      function replayVideo() {
+        video.currentTime = 0;
+        video.play();
+      }
+
+      // Event listener for the 'ended' event to trigger the replay function
+      video.addEventListener("ended", replayVideo);
+
+      // Trigger the initial play
+      video.play();
     </script>
 
     <!-- <canvas id="canvas"></canvas> -->
