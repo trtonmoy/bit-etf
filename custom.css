@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@600;700&display=swap");
+
+.vintage {
+  background: lighten(brown, 5%);
+  color: #ff8611;
+  font-family: "poppins";
+  text-shadow: 2px 2px 0px #fff, 6px 15px 0px rgba(0, 0, 0, 0.15);
+  display: block;
+  text-transform: uppercase;
+  transform: rotate(0deg);
+  font-size: 4em;
+  margin: 0;
+}
+
+div#n2-ss-2 .n2-style-405ef6bd1c949b596a8c2ba26098f628-heading {
+  background: #1f254dd4;
+  opacity: 1;
+  padding: 15px 15px 15px 15px;
+  box-shadow: none;
+  border: 0px solid RGBA(0, 0, 0, 1);
+  border-radius: 20px;
+}
