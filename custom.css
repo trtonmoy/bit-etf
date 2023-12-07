@@ -20,3 +20,15 @@ div#n2-ss-2 .n2-style-405ef6bd1c949b596a8c2ba26098f628-heading {
   border: 0px solid RGBA(0, 0, 0, 1);
   border-radius: 20px;
 }
+
+.ifram_style {
+  width: 100%;
+  height: 800px;
+}
+
+@media screen and (max-width: 768px) {
+  .ifram_style {
+    width: 100%;
+    height: 400px;
+  }
+}
