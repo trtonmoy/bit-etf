@@ -1,9 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@600;700&display=swap");
-
+@font-face {
+  font-family: "Franchise";
+  src: url("/images/Franchise-Free-Bold.otf") format("woff2"),
+    url("/images/Franchise-Free-Bold.otf") format("woff");
+  /* Add more formats if needed (e.g., ttf, svg, etc.) */
+}
 .vintage {
   background: lighten(brown, 5%);
   color: #ff8611;
-  font-family: "poppins";
+  font-family: "Franchise";
   text-shadow: 2px 2px 0px #fff, 6px 15px 0px rgba(0, 0, 0, 0.15);
   display: block;
   text-transform: uppercase;
@@ -24,11 +28,40 @@ div#n2-ss-2 .n2-style-405ef6bd1c949b596a8c2ba26098f628-heading {
 .ifram_style {
   width: 100%;
   height: 800px;
+  background-color: #2b57e2;
+}
+img.pos_img {
+  position: absolute;
+  top: 3%;
+  left: 242%;
 }
 
+.tkn_title {
+  text-align: center;
+  color: #fff;
+  font-family: "Franchise";
+
+  font-size: 35px;
+}
+.sub_tit {
+  font-size: 23px;
+}
 @media screen and (max-width: 768px) {
   .ifram_style {
     width: 100%;
     height: 400px;
+  }
+  .sub_tit {
+    font-size: 20px;
+  }
+  .sub_titl {
+    font-size: 15px;
+  }
+  .tkn_title {
+    text-align: center;
+    color: #fff;
+    font-family: "Franchise";
+
+    font-size: 22px;
   }
 }
