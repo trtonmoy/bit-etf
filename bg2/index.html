@@ -147,7 +147,9 @@
         padding: 0;
         margin: 0;
       }
-
+      .menu ul li a {
+        text-decoration: none;
+      }
       .menu li {
         padding: 10px;
         text-align: center;
@@ -173,7 +175,7 @@
         font-weight: bolder;
       }
 
-      .video-container {
+      /* .video-container {
         position: relative;
         width: 100%;
         overflow: hidden;
@@ -183,7 +185,7 @@
         height: auto;
         display: block;
         margin: auto;
-      }
+      } */
 
       .ban_img {
         margin: 200px 0 0;
@@ -236,60 +238,100 @@
         font-size: 2em;
         margin: 0;
       }
+
+      .image-container {
+        position: relative;
+
+        width: 100%;
+
+        /* Adjust the width as needed */
+      }
+
+      /* Actual image */
+      .ban_img {
+        margin: 200px 0 0;
+        width: 100%;
+        height: 650px;
+      }
+
+      /* Overlay */
+      .image-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+          to bottom,
+          #11097a 0%,
+          #231c865b 100%
+        ); /* Adjust the color and opacity as needed */
+      }
+
+      /* Optional: Text on the overlay */
     </style>
   </head>
   <body>
     <!-- partial:index.partial.html -->
 
-    <div id="word">
-      <div class="head_title">
-        <h2>
-          <span class="vintage" style="font-family: Franchise"
-            >Bitcoin ETF</span
-          >
-        </h2>
+    <div style="position: relative; z-index: 2; background-color: black">
+      <div id="word">
+        <div class="head_title">
+          <h2>
+            <span class="vintage" style="font-family: Franchise"
+              >Bitcoin ETF</span
+            >
+          </h2>
+        </div>
+        <img
+          src="/images/Asset6.png"
+          alt="Image"
+          class="resizable-image"
+          style="width: 100px"
+        />
       </div>
-      <img
-        src="/images/Asset6.png"
-        alt="Image"
-        class="resizable-image"
-        style="width: 100px"
-      />
+
+      <button class="button" onclick="toggleMenu()"></button>
+
+      <div class="menu" id="menu">
+        <ul>
+          <li>
+            <a href="https://t.me/Pepe2Portal" target="_blank">TELEGRAM</a>
+          </li>
+          <li>
+            <a
+              href="https://www.dextools.io/app/en/ether/pair-explorer/0x076a3e1500f3110d8f4445d396a3d7ca6d0ca269"
+              target="_blank"
+              >DEXTOOLS</a
+            >
+          </li>
+          <li>
+            <a href="https://twitter.com/pepe2coineth" target="_blank"
+              >TWITTER</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://app.uniswap.org/#/swap?outputCurrency=0xfb66321d7c674995dfcc2cb67a30bc978dc862ad"
+              target="_blank"
+              >UNISWAP</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://etherscan.io/token/0xfb66321d7c674995dfcc2cb67a30bc978dc862ad"
+              target="_blank"
+              >ETHERSCAN</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <button class="button" onclick="toggleMenu()"></button>
-
-    <div class="menu" id="menu">
-      <ul>
-        <li><a href="https://t.me/Pepe2Portal" target="_blank">TELEGRAM</a></li>
-        <li>
-          <a
-            href="https://www.dextools.io/app/en/ether/pair-explorer/0x076a3e1500f3110d8f4445d396a3d7ca6d0ca269"
-            target="_blank"
-            >DEXTOOLS</a
-          >
-        </li>
-        <li>
-          <a href="https://twitter.com/pepe2coineth" target="_blank">TWITTER</a>
-        </li>
-        <li>
-          <a
-            href="https://app.uniswap.org/#/swap?outputCurrency=0xfb66321d7c674995dfcc2cb67a30bc978dc862ad"
-            target="_blank"
-            >UNISWAP</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://etherscan.io/token/0xfb66321d7c674995dfcc2cb67a30bc978dc862ad"
-            target="_blank"
-            >ETHERSCAN</a
-          >
-        </li>
-      </ul>
+    <div class="image-container">
+      <img src="/images/ban.gif" alt="" class="ban_img" />
+      <!-- <div class="overlay-text">Your Overlay Text</div> -->
     </div>
-    <img src="/images/ban.gif" alt="" class="ban_img" />
-
     <!-- <div class="video-container">
       <video class="responsive-video" loop id="autoplayVideo">
         <source src="/images/ban.mp4" type="video/mp4" />
