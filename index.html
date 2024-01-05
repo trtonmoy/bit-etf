@@ -28,6 +28,332 @@
       href="/media/system/css/joomla-fontawesome.min.css"
       rel="lazy-stylesheet"
     />
+    <style>
+      @font-face {
+        font-family: "Franchise";
+        src: url("/images/Franchise-Free-Bold.otf") format("woff2"),
+          url("/images/Franchise-Free-Bold.otf") format("woff");
+        /* Add more formats if needed (e.g., ttf, svg, etc.) */
+      }
+      /* Default background for desktop */
+      body {
+        background-image: url("https://subcrawldew.com/pepe2/bg2/bgbw.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 800px;
+      }
+
+      /* Media query for mobile devices */
+      @media (max-width: 767px) {
+        body {
+          background-image: url("https://subcrawldew.com/pepe2/bg2/bgbws.jpg");
+          height: 400px;
+        }
+      }
+
+      .resizable-image {
+        position: absolute;
+        top: 35px;
+        left: 35px;
+        width: 170px;
+        height: auto;
+        border: 0px solid #ccc;
+        pointer-events: none; /* Disable click events on the image */
+        animation: pulse 3s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .button2 {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 20px 40px;
+        background-image: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        font-family: Arial, sans-serif;
+        font-size: 19px;
+        font-weight: bold;
+        color: #103173;
+      }
+
+      .button2:hover {
+        background: #5154f6;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+
+      .button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 999;
+      }
+
+      .button:before,
+      .button:after,
+      .button span {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: #f2b92a;
+        border-radius: 2px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .button:before {
+        transform: translateY(-8px);
+      }
+
+      .button:after {
+        transform: translateY(4px);
+      }
+
+      .button.open span {
+        background-color: transparent;
+      }
+
+      .button.open:before {
+        transform: translateY(0) rotate(45deg);
+      }
+
+      .button.open:after {
+        transform: translateY(-4px) rotate(-45deg);
+      }
+
+      .menu {
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 200px;
+        background-color: #f0b929;
+        border-radius: 6px;
+        display: none;
+        padding: 15px;
+        font-weight: 600;
+
+        z-index: 998;
+      }
+
+      .menu.open {
+        display: block;
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .menu ul li a {
+        text-decoration: none;
+      }
+      .menu li {
+        padding: 10px;
+        text-align: center;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .menu li:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .head_title h2 {
+        text-align: center;
+        color: #fff;
+        font-family: "Franchise";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 50px;
+        font-weight: bolder;
+      }
+      /* .head_title h2 {
+    text-align: center;
+    color: #fff;
+    font-family: "Franchise";
+    position: absolute;
+    top: 6%;
+    left: 37%;
+    font-size: 50px;
+    font-weight: bolder;
+} */
+
+      /* .video-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      .responsive-video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      } */
+
+      .ban_img {
+        margin: 200px 0 0;
+        width: 100%;
+        height: 650px;
+      }
+
+      .vintage {
+        background: lighten(brown, 5%);
+        color: #ff8611;
+        font-family: "poppins";
+        text-shadow: 2px 2px 0px #fff, 6px 15px 0px rgba(0, 0, 0, 0.15);
+        display: block;
+        text-transform: uppercase;
+        transform: rotate(0deg);
+        font-size: 2em;
+        margin: 0;
+      }
+
+      .image-container {
+        position: relative;
+
+        width: 100%;
+
+        /* Adjust the width as needed */
+      }
+
+      /* Actual image */
+      .ban_img {
+        margin: 200px 0 0;
+        width: 100%;
+        height: 700px;
+      }
+
+      /* Overlay */
+      /* .image-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+          to bottom,
+          #11097a 0%,
+          #231c865b 100%
+        ); 
+      } */
+      .head_title h2 {
+        text-align: center;
+        color: #fff;
+        font-family: "Franchise";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 50px;
+        font-weight: bolder;
+        top: 0;
+      }
+      @media screen and (max-width: 768px) {
+        .head_title h2 {
+          text-align: center;
+          color: #fff;
+          position: absolute;
+          left: 16%;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 2.8em;
+          margin-top: 69px;
+        }
+        .vintage {
+          background: lighten(brown, 5%);
+          color: #ff8611;
+          font-family: "poppins";
+          text-shadow: 2px 2px 0px #fff, 6px 15px 0px rgba(0, 0, 0, 0.15);
+          display: block;
+          text-transform: uppercase;
+          transform: rotate(0deg);
+          font-size: 1em;
+          margin: 0;
+        }
+        .ban_img {
+          margin: 200px 0 0;
+          width: 100%;
+          height: auto;
+        }
+        .head_title h2 {
+          text-align: center;
+          color: #fff;
+          font-family: "Franchise";
+          position: absolute;
+          left: 87px;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 50px;
+          font-weight: bolder;
+          top: 0;
+        }
+      }
+
+      /* @media screen and (min-width: 1600px) {
+        .ban_img {
+          margin: 200px 0 0;
+          width: 100%;
+          height: 850px;
+        }
+        .head_title h2 {
+          text-align: center;
+          color: #fff;
+          font-family: "Franchise";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0px;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 70px;
+        }
+      } */
+
+      /* @media screen and (mix-width: 1900px) {
+        .ban_img {
+          margin: 200px 0 0;
+          width: 100%;
+          height: 550px;
+        }
+      } */
+      /* Optional: Text on the overlay */
+    </style>
     <noscript
       ><link
         href="/media/system/css/joomla-fontawesome.min.css"
@@ -2736,7 +3062,7 @@
 
     <div class="site-grid">
       <div class="container-banner full-width">
-        <iframe
+        <!-- <iframe
           id="blockrandom-115"
           name=""
           src="bg2/index.html"
@@ -2745,7 +3071,70 @@
           class="mod-wrapper wrapper ifram_style"
         >
           No iframes</iframe
+        > -->
+        <div
+          style="
+            position: relative;
+            z-index: 2;
+            background-color: black;
+            padding: 78px;
+          "
         >
+          <div id="word">
+            <div class="head_title">
+              <h2>
+                <span class="vintage" style="font-family: Franchise"
+                  >Bitcoin ETF</span
+                >
+              </h2>
+            </div>
+            <img
+              src="/images/Asset6.png"
+              alt="Image"
+              class="resizable-image"
+              style="width: 100px"
+            />
+          </div>
+
+          <!--       <button class="button" onclick="toggleMenu()"></button>
+ -->
+          <!--       <div class="menu" id="menu">
+        <ul>
+          <li>
+            <a href="https://t.me/Pepe2Portal" target="_blank">TELEGRAM</a>
+          </li>
+          <li>
+            <a
+              href="https://www.dextools.io/app/en/ether/pair-explorer/0x076a3e1500f3110d8f4445d396a3d7ca6d0ca269"
+              target="_blank"
+              >DEXTOOLS</a
+            >
+          </li>
+          <li>
+            <a href="https://twitter.com/pepe2coineth" target="_blank"
+              >TWITTER</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://app.uniswap.org/#/swap?outputCurrency=0xfb66321d7c674995dfcc2cb67a30bc978dc862ad"
+              target="_blank"
+              >UNISWAP</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://etherscan.io/token/0xfb66321d7c674995dfcc2cb67a30bc978dc862ad"
+              target="_blank"
+              >ETHERSCAN</a
+            >
+          </li>
+        </ul>
+      </div> -->
+        </div>
+        <div class="image-container">
+          <img src="/images/ban.gif" alt="" class="ban_img" />
+        </div>
         <div>
           <div
             class="n2-section-smartslider fitvidsignore n2_clear"
