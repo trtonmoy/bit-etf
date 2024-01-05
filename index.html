@@ -44,6 +44,23 @@
         height: 800px;
       }
 
+      @font-face {
+        font-family: "Franchise";
+        src: url("/images/Franchise-Free-Bold.otf") format("woff2"),
+          url("/images/Franchise-Free-Bold.otf") format("woff");
+        /* Add more formats if needed (e.g., ttf, svg, etc.) */
+      }
+      .vintage {
+        background: lighten(brown, 5%);
+        color: #ff8611;
+        font-family: "Franchise";
+        text-shadow: 2px 2px 0px #fff, 6px 15px 0px rgba(0, 0, 0, 0.15);
+        display: block;
+        text-transform: uppercase;
+        transform: rotate(0deg);
+        font-size: 4em;
+        margin: 0;
+      }
       /* Media query for mobile devices */
       @media (max-width: 767px) {
         body {
@@ -3076,7 +3093,7 @@
           style="
             position: relative;
             z-index: 2;
-            background-color: black;
+            background-color: #2733cc;
             padding: 78px;
           "
         >
