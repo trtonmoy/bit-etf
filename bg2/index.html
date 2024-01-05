@@ -247,28 +247,28 @@
         ); 
       } */
       @media screen and (max-width: 768px) {
-       .head_title h2 {
-    text-align: center;
-    color: #fff;
-    position: absolute;
-    left: 16%;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 2.8em;
-    margin-top: 69px;
-}
- .vintage {
-        background: lighten(brown, 5%);
-        color: #ff8611;
-        font-family: "poppins";
-        text-shadow: 2px 2px 0px #fff, 6px 15px 0px rgba(0, 0, 0, 0.15);
-        display: block;
-        text-transform: uppercase;
-        transform: rotate(0deg);
-        font-size: 1em;
-        margin: 0;
-      }
+        .head_title h2 {
+          text-align: center;
+          color: #fff;
+          position: absolute;
+          left: 16%;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 2.8em;
+          margin-top: 69px;
+        }
+        .vintage {
+          background: lighten(brown, 5%);
+          color: #ff8611;
+          font-family: "poppins";
+          text-shadow: 2px 2px 0px #fff, 6px 15px 0px rgba(0, 0, 0, 0.15);
+          display: block;
+          text-transform: uppercase;
+          transform: rotate(0deg);
+          font-size: 1em;
+          margin: 0;
+        }
         .ban_img {
           margin: 200px 0 0;
           width: 100%;
@@ -325,9 +325,9 @@
         />
       </div>
 
-<!--       <button class="button" onclick="toggleMenu()"></button>
+      <!--       <button class="button" onclick="toggleMenu()"></button>
  -->
-<!--       <div class="menu" id="menu">
+      <!--       <div class="menu" id="menu">
         <ul>
           <li>
             <a href="https://t.me/Pepe2Portal" target="_blank">TELEGRAM</a>
@@ -363,14 +363,8 @@
     </div>
     <div class="image-container">
       <img src="/images/ban.gif" alt="" class="ban_img" />
-      <!-- <div class="overlay-text">Your Overlay Text</div> -->
     </div>
-    <!-- <div class="video-container">
-      <video class="responsive-video" loop id="autoplayVideo">
-        <source src="/images/ban.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div> -->
+
     <script>
       function toggleMenu() {
         var menu = document.getElementById("menu");
@@ -400,5 +394,11 @@
     <!-- partial -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script> -->
     <script src="./script.js"></script>
+    <script>
+      window.onload = function () {
+        var video = document.getElementById("autoplayVideo");
+        video.play();
+      };
+    </script>
   </body>
 </html>
